@@ -1,0 +1,48 @@
+header
+    width: 100%
+    z-index: 9999
+    transition: all ease .3s
+    margin-bottom: 70px
+    .container
+        transition: all ease .3s
+
+    .logo
+        display: block
+        width: 168px
+        img
+            display: block
+
+    a
+        font-family: 'TT Travels', sans-serif
+        
+    nav
+        a
+            font-size: 13px
+            font-weight: 600
+            display: block
+            padding: 5px 15px
+            position: relative
+            z-index: 1
+            &::after
+                transition: all ease .4s
+                content: ''
+                display: block
+                width: calc( 100% - 30px )
+                height: 1px
+                left: 15px
+                position: absolute
+                bottom: 0
+                background-color: #fff
+                transform: scaleX(0)
+                transform-origin: 0 0
+
+            &:hover
+                opacity: 1
+                &::after
+                    transform: scaleX(1)
+
+    .btnMenu
+        display: none
+        width: 45px
+        height: 45px
+        text-align: center

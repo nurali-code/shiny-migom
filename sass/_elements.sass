@@ -1,0 +1,103 @@
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    border: none
+    outline: none
+
+$black: #000
+$prime: #FFDB4D
+
+body
+    min-height: 100vh
+    font-size: 16px
+    color: #fff
+    background-color: #16171B
+    font-family: 'HelveticaNeueCyr', sans-serif
+    scroll-behavior: smooth
+    position: relative
+    z-index: 1
+
+    &.active
+        overflow: hidden
+
+h1, h2, h3, h4, h5, h6
+    font-family: 'TT Travels', sans-serif
+    font-weight: 600
+
+h1
+    font-size: 90px
+    font-weight: 600
+    line-height: 122.222%
+
+p
+    font-size: 16px
+    font-weight: 400
+
+img
+    max-width: 100%
+
+a,
+button
+    color: white
+    text-decoration: none
+    transition: all ease .3s
+    background-color: transparent
+    &:active
+        transform: scale(.98)
+
+    &:hover
+        opacity: .8
+
+mark
+    font-weight: 600
+    background: transparent
+    color: #298FF3
+
+.container
+    width: 100%
+    max-width: 1062px
+    padding: 30px
+    position: relative
+    z-index: 1
+    margin:
+        left: auto
+        right: auto
+
+h3,.h3
+    font-size: 18px
+    margin-bottom: 20px
+
+h2, .h2
+    font-family: 'Akzidenz-Grotesk Pro Med', sans-serif
+    font-size: 70px
+    line-height: 100%
+    font-weight: normal
+    letter-spacing: -4px
+    color: rgb(54, 52, 52)
+
+ul
+    list-style: none
+
+section, .section
+    padding: 100px 0
+    position: relative
+    z-index: 1
+
+.nowrap
+    white-space: nowrap
+
+.wrap, .wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-wrap: wrap
+
+ol
+    padding-left: 20px
+    margin-bottom: 20px
+    li
+        font-size: 14px
+        font-style: normal
+        font-weight: 400
+        padding: 2.5px 0
