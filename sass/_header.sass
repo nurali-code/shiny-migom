@@ -1,49 +1,128 @@
 header
     width: 100%
-    z-index: 9999
+    z-index: 99999
     transition: all ease .3s
     margin-bottom: 70px
     padding-top: 40px
-    .container
-        transition: all ease .3s
 
     .logo
         display: block
-        width: 168px
+        width: 133px
         img
+            width: 100%
             display: block
 
     a
         font-family: 'TT Travels', sans-serif
-        
+
     nav
         a
             font-size: 13px
             font-weight: 600
             display: block
             padding: 5px 15px
-            position: relative
-            z-index: 1
-            &::after
-                transition: all ease .4s
-                content: ''
-                display: block
-                width: calc( 100% - 30px )
-                height: 1px
-                left: 15px
-                position: absolute
-                bottom: 0
-                background-color: #fff
-                transform: scaleX(0)
-                transform-origin: 0 0
-
-            &:hover
-                opacity: 1
+            @media screen and ( min-width: 1000px )
+                position: relative
+                z-index: 1
                 &::after
-                    transform: scaleX(1)
+                    transition: all ease .4s
+                    content: ''
+                    display: block
+                    width: calc( 100% - 30px )
+                    height: 1px
+                    left: 15px
+                    position: absolute
+                    bottom: 0
+                    background-color: #fff
+                    transform: scaleX(0)
+                    transform-origin: 0 0
+
+                &:hover
+                    opacity: 1
+                    &::after
+                        transform: scaleX(1)
 
     .btnMenu
         display: none
-        width: 45px
-        height: 45px
-        text-align: center
+        width: 55px
+        height: 55px
+        position: relative
+        z-index: 9999
+
+    @media screen and ( max-width: 1000px )
+        padding: 20px 0
+        margin-bottom: 20px
+        text-align: left
+        .phone
+            display: none
+
+        .nav
+            position: fixed
+            top: 0
+            right: 0
+            max-width: 80%
+            display: block
+            background-color: $prime
+            height: 100vh
+            height: 100lvh
+            z-index: 9999
+            padding-top: 80px
+            width: 290px
+            opacity: 0
+            visibility: hidden
+            transform: translateX(100%)
+            transition: all cubic-bezier(0, 0, 0.2, 1) .5s
+            box-shadow: -480px 0 0 250px rgba(0, 0, 0, .5)
+
+            a
+                display: block
+                color: $black
+                padding: 10px 30px
+
+            &.active
+                opacity: 1
+                visibility: visible
+                transform: translateX(0%)
+
+        .btnMenu
+            background-image: url('../img/ic-menu.svg')
+            background-repeat: no-repeat
+            background-position: center center
+            display: block
+            position: relative
+            right: -16px
+            opacity: 1 !important
+            &::before,
+            &::after
+                content: ''
+                display: block
+                width: 60%
+                margin: 0 auto
+                height: 3px
+                transform-origin: 50% 50%
+                background-color: #1D1D1D
+                transition: all ease .3s
+                transform: rotate(0)
+                opacity: 1
+                position: relative
+                top: 1px
+                opacity: 0
+                pointer-events: none
+            &::after
+                top: -1px
+
+            &.active
+                background-image: none
+                &::before
+                    opacity: 1
+                    transform: rotate(45deg)
+                &::after
+                    opacity: 1
+                    transform: rotate(-45deg)
+
+    @media screen and ( max-width: 700px )
+        .logo
+            max-width: 84px
+
+        .btnMenu
+            height: 40px

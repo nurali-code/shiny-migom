@@ -6,6 +6,8 @@ $(document).ready(function () {
     //     } else { header.removeClass('fixed'); }
     // });
 
+    $('.btnMenu').on('click', () => { $('.btnMenu, .nav').toggleClass('active') });
+
     if ($('div').hasClass('wk-slider') && $(window).width() >= '999') {
         $('.wk-slider>').getNiceScroll().resize();
         $('.wk-slider').niceScroll({

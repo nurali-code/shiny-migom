@@ -9,7 +9,7 @@
 
 .main
     position: relative
-    z-index: 1
+    z-index: 999
     overflow: hidden
 
     h1
@@ -20,15 +20,21 @@
 
     .container
         min-height: 920px
+        z-index: 99
 
     &__img
-        position: absolute
-        right: -6%
-        bottom: 20px
-        max-height: 80%
-        max-width: 60%
+        display: block
+        margin: 0 0 0 auto 
         object-fit: contain
         object-position: bottom right
+        z-index: -1
+
+        @media screen and ( min-width: 1000px )
+            max-height: 80%
+            max-width: 54%
+            position: absolute
+            right: -6%
+            bottom: 20px
 
     &__bg
         width: 100%
@@ -173,3 +179,26 @@
             font-style: normal
             font-weight: 300
             line-height: 150%
+
+@media screen and ( max-width: 1000px )
+    .main
+        text-align: center
+
+        .container
+            min-height: unset
+
+        h1
+            font-size: 40px
+            text-align: center
+            margin-bottom: 30px
+
+        &__img
+            position: relative
+            right: -40px
+            max-width: 95%
+            margin-top: 40px
+
+    .wk,
+    .mobile,
+    .how
+        display: none
