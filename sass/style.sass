@@ -105,3 +105,71 @@
         text-transform: uppercase
         color: #16171B
         text-shadow: 1px 1px #2B2C34, -1px -1px #2B2C34
+
+.mobile
+    padding: 80px 0 140px
+    color: white
+    background-color: $second
+    h2
+        max-width: 743px
+        margin-bottom: 80px
+
+    &-item
+        width: 32%
+        gap: 20px
+        padding: 18px
+        color: $prime
+        font-size: 16px
+        font-weight: 700
+        line-height: 150%
+        position: relative
+        z-index: 1
+        background-color: $prime
+        clip-path: polygon(0 20px, 20px 0, 100% 0, 100% calc( 100% - 20px ), calc( 100% - 20px ) 100%, 0 100%)
+        &::before
+            content: ''
+            display: block
+            width: calc( 100% - 2px )
+            height: calc( 100% - 2px )
+            position: absolute
+            top: 1px
+            left: 1px
+            z-index: -1
+            pointer-events: none
+            background-color: $second
+            clip-path: polygon(0 20px, 20px 0, 100% 0, 100% calc( 100% - 20px ), calc( 100% - 20px ) 100%, 0 100%)
+
+        span
+            display: block
+            max-width: 60%
+
+    &-icon
+        height: 100px
+        object-fit: contain
+
+.how
+    background-color: $prime
+    color: #000
+    padding: 80px 0 100px
+    h2
+        font-size: 40px
+        font-style: normal
+        font-weight: 600
+    a
+        white-space: nowrap
+        color: #000
+        font-weight: 600
+        &:hover
+            text-decoration: underline
+
+    ul
+        align-items: flex-start
+        padding-top: 60px
+        border-top: 1px solid #000
+        li
+            color: #000
+            max-width: 30%
+            font-size: 16px
+            font-style: normal
+            font-weight: 300
+            line-height: 150%

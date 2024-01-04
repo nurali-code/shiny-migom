@@ -1,21 +1,63 @@
 .footer
-    background-color: #000
-    padding: 100px 0 80px
-    margin-top: 250px
-    &__text
-        position: relative
-        font-size: 25px
-        margin: 0 auto 
-        color: white
+    background-color: #16171B
+    padding: 40px 0 50px
+    .container
+        align-items: flex-start
 
-    &__logo
-        max-width: 168px
+    .logo
+        margin-bottom: 25px
+
+    &__text
+        color: #6A6A6A
+        font-size: 12px
+        font-weight: 400
+        line-height: 180%
+        a
+            color: #6A6A6A
+            padding: 0
+            text-decoration: underline
+            &:hover
+                opacity: 1
+                color: #fff
+                text-decoration: none
+
+    .col
+        max-width: 30%
+        position: relative
+        z-index: 1
+        a:not(.btn)
+            display: block
+            font-size: 14px
+            padding: 5px 0
+            font-weight: 400
+            line-height: 171.429%
+            &:hover
+                text-decoration: underline
+
+    &__phone
+        color: $prime
+        font-weight: 700
+
+    .btn
+        padding: 12px 18px
+        min-height: unset
+        font-size: 12px
+        line-height: 100%
+
+    &__heading
+        margin-bottom: 11px
+        font-size: 14px
+        font-weight: 700
+        line-height: 171.429%
+
+    &__email
+        text-decoration: underline
+        margin-bottom: 25px
+
+    &__external
         display: block
-        filter: invert(1)
         position: absolute
-        top: 50%
-        left: 50%
-        transform: translate(-50%, -50%) !important
-        
-    img
-        display: block
+        bottom: 4px
+        right: -10%
+        img 
+            display: block
