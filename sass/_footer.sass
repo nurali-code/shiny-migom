@@ -23,9 +23,7 @@
                 text-decoration: none
 
     .col
-        max-width: 30%
-        position: relative
-        z-index: 1
+        max-width: 37%
         a:not(.btn)
             display: block
             font-size: 14px
@@ -56,12 +54,62 @@
         margin-bottom: 25px
 
     &__external
-        display: block
-        position: absolute
-        bottom: 4px
-        right: -10%
-        img 
+        display: inline-block !important
+        vertical-align: middle
+        margin-left: 20px
+        img
             display: block
 
-    @media screen and ( max-width: 1000px )
-        display: none
+    @media screen and ( max-width: 860px )
+        .logo
+            margin-bottom: 15px
+
+        .container
+            justify-content: space-evenly
+
+        &__heading
+            display: none
+        nav
+            display: none
+
+        .col
+            max-width: 50%
+
+    @media screen and ( max-width: 700px )
+        padding: 40px 0
+        
+        .container
+            padding-top: 100px
+
+        .col
+            max-width: 100%
+            text-align: center
+            &:first-child
+                order: 3
+            &:last-child
+                order: 1
+                margin-bottom: 40px
+
+        .btn
+            width: unset
+            display: inline-block
+            max-width: 100%
+            text-align: center
+            margin-bottom: 40px
+
+        .logo
+            position: absolute
+            top: 0
+            left: 50%
+            transform: translateX(-50%)
+
+        &__external
+            margin: 0
+            display: block !important
+            margin: 0 auto
+            max-width: 100px
+
+        &__phone
+            font-size: 24px !important
+            font-weight: 700 !important
+            line-height: 36px !important

@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Выездной шиномонтаж</title>
     <meta name="theme-color" content="#FFDB4D">
-    <link type="image/svg" rel="shortcut icon" href="/favicon.svg">
+    <link type="image/svg" rel="shortcut icon" href="./favicon.svg">
 
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
 
-    <main class="main">
+    <main class="main" id="main">
         <div class="container">
             <header class="wrap header">
-                <a href="#" class="logo"><img src="img/logo.svg" alt="logo"></a>
+                <a href="#main" class="logo"><img src="img/logo.svg" alt="logo"></a>
                 <nav class="wrap nav">
                     <a href="#">Мастера</a>
                     <a href="#">Преимущества</a>
@@ -115,7 +115,7 @@
 
     <section class="mobile">
         <div class="container">
-            <h2>Мобильный шиномонтаж и замена колес</h2>
+            <h2>Мобильный шиномонтаж <i>и замена</i> колес</h2>
             <div class="wrap">
                 <p class="mobile-item fx">
                     <img src="img/car-1.svg" alt="car" class="mobile-icon">
@@ -130,6 +130,27 @@
                     <span>Коммерческий транспорт</span>
                 </p>
             </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2>Преимущества <br> мобильного шиномонтажа</h2>
+            <ul class="features-list wrap">
+                <li>Гарантия на все виды работ</li>
+                <li>Профессиональная диагностика</li>
+                <li>Круглосуточно, 24/7</li>
+                <li>Любая форма оплаты</li>
+                <li>Высокое качество обслуживания</li>
+                <li>Без очередей</li>
+                <li>Сертифицированное оборудование и мастера</li>
+                <li>В дороге, На даче, У дома</li>
+
+
+                <li class="features-img">
+                    <img src="img/main.jpg" alt="main">
+                </li>
+            </ul>
         </div>
     </section>
 
@@ -151,7 +172,7 @@
                     из наших мобильных станций сейчас рядом с вами.
                 </li>
                 <li>
-                    Мы открыты, работаем по графику: <br>
+                    Мы открыты, работаем <span class="nowrap">по графику:</span> <br>
                     <strong>24 часа / 7 дней в неделю.</strong>
                 </li>
             </ul>
@@ -161,7 +182,7 @@
     <footer class="footer">
         <div class="container wrap">
             <div class="col">
-                <a href="#" class="logo"><img src="img/logo.svg" alt="logo"></a>
+                <a href="#main" class="logo"><img src="img/logo.svg" alt="logo"></a>
                 <p class="footer__text">
                     Круглосуточный мобильный выездной шиномонтаж <br>
                     Copyright «Шины мигом» 2016-2023
@@ -191,7 +212,7 @@
 
 
     <script src="./js/jquery-3.7.1.min.js"></script>
-    <script src="./js/jquery.nicescroll.min.js"></script>
+    <script src="./js/slick.min.js"></script>
     <script src="./js/script.js"></script>
 
 </body>

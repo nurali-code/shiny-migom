@@ -8,15 +8,16 @@ $(document).ready(function () {
 
     $('.btnMenu').on('click', () => { $('.btnMenu, .nav').toggleClass('active') });
 
-    if ($('div').hasClass('wk-slider') && $(window).width() >= '999') {
-        $('.wk-slider>').getNiceScroll().resize();
-        $('.wk-slider').niceScroll({
-            touchbehavior: true,
-            grabcursorenabled: true,
-            autohidemode: "hidden",
-            emulatetouch: true,
-            touchbehavior: true,
-            smoothscroll: true,
+    if ($(window).width() >= '999') {
+        $('.wk-slider').slick({
+            arrows: false,
+            dots: false,
+            // autoplay: true,
+            // autoplaySpeed: 3000,
+            infinite: false,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            variableWidth: true,
         });
     }
 

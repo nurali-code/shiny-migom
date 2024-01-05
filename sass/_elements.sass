@@ -72,6 +72,9 @@ h3,.h3
 h2, .h2
     font-size: 56px
     margin: 0 0 50px
+    i 
+        font-style: normal
+        white-space: nowrap
 
 ul
     list-style: none
@@ -101,5 +104,16 @@ ol
         font-weight: 400
         padding: 2.5px 0
 
-.nicescroll-rails
-    display: none !important
+@media screen and ( max-width: 1173px )
+    h2, .h2
+        font-size: 30px
+        line-height: normal
+        margin-bottom: 40px
+
+@media screen and ( max-width: 1000px )
+    section, .section
+        padding: 60px 0
+
+@media screen and ( max-width: 700px )
+    section, .section
+        padding: 40px 0
