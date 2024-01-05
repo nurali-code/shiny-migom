@@ -166,26 +166,35 @@
         object-fit: contain
 
 .features
-    display: none
     &-list
         position: relative
         z-index: 1
         gap: 0 30%
-        li
-            min-width: 33.4%
-            max-width: 33.4%
-            font-size: 16px
-            font-weight: 700
-            line-height: 24px
-            padding: 25px 0
-            color: $prime
-            text-align: left
-            &:nth-child(odd)
-                text-align: right
+    &-item
+        font-size: 16px
+        font-weight: 700
+        line-height: 24px
+        padding: 25px 0
+        color: $prime
+        text-align: left
+        width: 261px
+        &:nth-child(odd)
+            width: 284px
+            text-align: right
 
     &-img
         position: absolute
-        display: none
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 328px
+        padding: 0
+        img
+            display: block
+            width: 100%
+            aspect-ratio: 1/1
+            object-fit: cover
+            clip-path: polygon(0 20px, 20px 0, 100% 0, 100% calc( 100% - 20px ), calc( 100% - 20px ) 100%, 0 100%)
 
 .how
     background-color: $prime
