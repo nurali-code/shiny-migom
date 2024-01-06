@@ -19,7 +19,7 @@
             text-decoration: underline
             &:hover
                 opacity: 1
-                color: #fff
+                color: $prime
                 text-decoration: none
 
     .col
@@ -31,11 +31,15 @@
             font-weight: 400
             line-height: 171.429%
             &:hover
+                opacity: 1
+                color: $prime
                 text-decoration: underline
 
     &__phone
         color: $prime
         font-weight: 700
+        &:hover
+            color: $second !important
 
     .btn
         padding: 12px 18px
@@ -77,7 +81,7 @@
 
     @media screen and ( max-width: 700px )
         padding: 40px 0
-        
+
         .container
             padding-top: 100px
 

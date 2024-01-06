@@ -25,22 +25,29 @@ header
                 height: 1px
                 left: 15px
                 position: absolute
-                bottom: 0
-                background-color: #fff
+                bottom: 8px
+                background-color: $prime
                 transform: scaleX(0)
                 transform-origin: 0 0
 
             &:hover
                 opacity: 1
+                color: $prime
                 &::after
                     transform: scaleX(1)
+
+    .phone
+        &::after
+            width: 100%
+            left: 0
+            bottom: -4px
 
     nav
         a
             font-size: 13px
             font-weight: 600
             display: block
-            padding: 5px 15px
+            padding: 15px 
 
     .btnMenu
         display: none

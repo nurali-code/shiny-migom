@@ -18,12 +18,12 @@
             <header class="wrap header">
                 <a href="#main" class="logo"><img src="img/logo.svg" alt="logo"></a>
                 <nav class="wrap nav">
-                    <a href="#">Мастера</a>
-                    <a href="#">Преимущества</a>
-                    <a href="#">Услуги</a>
-                    <a href="#">Цены</a>
-                    <a href="#">Отзывы</a>
-                    <a href="#">Вопросы-ответы</a>
+                    <a href="#masters">Мастера</a>
+                    <a href="#features">Преимущества</a>
+                    <a href="#services">Услуги</a>
+                    <a href="#price">Цены</a>
+                    <a href="#reviews">Отзывы</a>
+                    <a href="#faq">Вопросы-ответы</a>
                 </nav>
                 <a href="tel:88005551326" class="phone">8 800 555 13 26</a>
                 <button class="btnMenu"></button>
@@ -31,7 +31,7 @@
 
             <h1>Выездной <br>шиномонтаж</h1>
             <a href="tel:88005551326" class="btn"> <img src="img/ic-call.svg" alt="call"> Вызвать мастера</a>
-            <a href="tel:88005551326" class="btn_2"> <img src="img/ic-wa.svg" alt="wa"> Написать в Whatsapp</a>
+            <a href="https://wa.me/88005551326" target="_blank" class="btn_2"> <img src="img/ic-wa.svg" alt="wa"> Написать в Whatsapp</a>
 
             <picture>
                 <source srcset="img/wk.webp" type="image/webp">
@@ -58,7 +58,7 @@
         <img src="img/main.jpg" alt="main" class="main__bg">
     </main>
 
-    <section class="wk">
+    <section class="wk" id="masters">
         <h2 class="container">К вам приедет</h2>
         <div class="wrap wk-slider">
             <div class="wk-item">
@@ -117,7 +117,7 @@
         <h3 class="wk__textbg">Наши мастера</h3>
     </section>
 
-    <section class="mobile">
+    <section class="mobile" id="mobile">
         <div class="container">
             <h2>Мобильный шиномонтаж <i>и замена</i> колес</h2>
             <div class="wrap">
@@ -137,7 +137,7 @@
         </div>
     </section>
 
-    <section class="features">
+    <section class="features" id="features">
         <div class="container">
             <h2>Преимущества <br> мобильного шиномонтажа</h2>
             <ul class="features-list wrap">
@@ -157,15 +157,49 @@
         </div>
     </section>
 
-    <section class="price">
+    <div class="services" id="services">
+        <div class="container">
+            <h2>Услуги</h2>
+            <p class="services__text">Мобильные шиномонтажные услуги стоят <mark>дешевле</mark>, чем вызов эвакуатора.
+            </p>
+            <div class="wrap services-slider">
+                <p class="services-item">
+                    <img src="img/services-1.jpg" alt="service">
+                    <span>Помощь в дороге, <br> на даче, у дома</span>
+                </p>
+                <p class="services-item">
+                    <img src="img/services-2.jpg" alt="service">
+                    <span>Сезонная замена</span>
+                </p>
+                <p class="services-item">
+                    <img src="img/services-3.jpg" alt="service">
+                    <span>Хранение</span>
+                </p>
+                <p class="services-item">
+                    <img src="img/services-4.jpg" alt="service">
+                    <span>Новые шины</span>
+                </p>
+                <p class="services-item">
+                    <img src="img/services-5.jpg" alt="service">
+                    <span>Новые диски</span>
+                </p>
+                <p class="services-item">
+                    <img src="img/services-6.jpg" alt="service">
+                    <span>Обслуживание <br> автопорогов</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <section class="price" id="price">
         <div class="container">
             <h2>Стоимость</h2>
             <p class="price__descr">Минимальная стоимость выезда: <b>2500 P</b></p>
             <div class="wrap filter">
-                <button class="filter__btn active">R13-R16</button>
-                <button class="filter__btn">R17-R18</button>
-                <button class="filter__btn">R19-R20</button>
-                <button class="filter__btn">R21-R22</button>
+                <button data-filter="1" class="filter__btn active">R13-R16</button>
+                <button data-filter="2" class="filter__btn">R17-R18</button>
+                <button data-filter="3" class="filter__btn">R19-R20</button>
+                <button data-filter="4" class="filter__btn">R21-R22</button>
             </div>
             <div class="wrap price-table">
                 <p class="col">
@@ -179,7 +213,7 @@
                     <span class="td">Ремонт одного колеса</span>
                     <span class="td">Ремонт двух колес</span>
                 </p>
-                <p class="col">
+                <p class="col" data-content="1">
                     <span class="th">R13-R16</span>
                     <span class="td">от 3100 P</span>
                     <span class="td">от 2500 P</span>
@@ -188,7 +222,7 @@
                     <span class="td">от 2500 P</span>
                     <span class="td">от 3500 P</span>
                 </p>
-                <p class="col">
+                <p class="col" data-content="2">
                     <span class="th">R17-R18</span>
                     <span class="td">от 3340 P</span>
                     <span class="td">от 2700 P</span>
@@ -197,7 +231,7 @@
                     <span class="td">от 3000 P</span>
                     <span class="td">от 4000 P</span>
                 </p>
-                <p class="col">
+                <p class="col" data-content="3">
                     <span class="th">R19-R20</span>
                     <span class="td">от 4180 P</span>
                     <span class="td">от 3000 P</span>
@@ -206,7 +240,7 @@
                     <span class="td">от 3500 P</span>
                     <span class="td">от 4500 P</span>
                 </p>
-                <p class="col">
+                <p class="col" data-content="4">
                     <span class="th">R21-R22</span>
                     <span class="td">от 4680 P</span>
                     <span class="td">от 3500 P</span>
@@ -223,9 +257,103 @@
         </div>
     </section>
 
-    <section class="faq">
+    <section class="low">
+        <div class="container wrap">
+            <div class="low-img">
+                <img src="img/low.svg" alt="low">
+            </div>
+            <div class="low-title">
+                <h2 class="headline">Для юридических лиц</h2>
+                <ul class="low-list">
+                    <li>Работа с НДС</li>
+                    <li>Комплексное обслуживание автопарков</li>
+                    <li>Заключение договора</li>
+                    <li>Оплата после выполнения работ</li>
+                </ul>
+                <form action="#" class="wrap">
+                    <input type="tel" placeholder="+ 7" required name="phone">
+                    <button type="submit" class="btn">Оформить заявку</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews" id="reviews">
+        <h2 class="headline container">Отзывы</h2>
+        <div class="wrap wk-slider">
+            <div class="review">
+                <p class="review-header wrap">
+                    <img src="img/rev.png" alt="reviews">
+                    <span>
+                        <strong>Татьяна Хейтер</strong>
+                        3 сентября 2020 г.
+                    </span>
+                </p>
+                <p class="review__text">
+                    <img src="img/stars.svg" class="review__stars" alt="stars"> Отличный магазин
+                    <br>
+                    <br>
+                    <b>Достоинства</b> <br>
+                    Отличный магазин, всё рассказали, грамотно проконсультировали, порадовали ценами, сделали
+                    бесплатный шиномонтаж, буду теперь обращаться только сюда.
+                    <br>
+                    <br>
+                    <b>Недостатки</b> <br>
+                    Ни одного.
+                </p>
+                <p class="review__from">Отзыв с Яндекс Маркета</p>
+            </div>
+            <div class="review">
+                <p class="review-header wrap">
+                    <img src="img/rev.png" alt="reviews">
+                    <span>
+                        <strong>Татьяна Хейтер</strong>
+                        3 сентября 2020 г.
+                    </span>
+                </p>
+                <p class="review__text">
+                    <img src="img/stars.svg" class="review__stars" alt="stars"> Отличный магазин
+                    <br>
+                    <br>
+                    <b>Достоинства</b> <br>
+                    Отличный магазин, всё рассказали, грамотно проконсультировали, порадовали ценами, сделали
+                    бесплатный шиномонтаж, буду теперь обращаться только сюда.
+                    <br>
+                    <br>
+                    <b>Недостатки</b> <br>
+                    Ни одного.
+                </p>
+                <p class="review__from">Отзыв с Яндекс Маркета</p>
+            </div>
+            <div class="review">
+                <p class="review-header wrap">
+                    <img src="img/rev.png" alt="reviews">
+                    <span>
+                        <strong>Татьяна Хейтер</strong>
+                        3 сентября 2020 г.
+                    </span>
+                </p>
+                <p class="review__text">
+                    <img src="img/stars.svg" class="review__stars" alt="stars"> Отличный магазин
+                    <br>
+                    <br>
+                    <b>Достоинства</b> <br>
+                    Отличный магазин, всё рассказали, грамотно проконсультировали, порадовали ценами, сделали
+                    бесплатный шиномонтаж, буду теперь обращаться только сюда.
+                    <br>
+                    <br>
+                    <b>Недостатки</b> <br>
+                    Ни одного.
+                </p>
+                <p class="review__from">Отзыв с Яндекс Маркета</p>
+            </div>
+        </div>
+        <h3 class="wk__textbg">SHINY MIGOM</h3>
+    </section>
+
+    <section class="faq" id="faq">
         <div class="container">
-            <h2>Ответы на частые вопросы</h2>
+            <h2 class="headline">Ответы на частые вопросы</h2>
             <div class="dropdown">
                 <h3 class="dropdown__btn">Есть ли отличия мобильного шиномонтажа от стационарного при балансировки
                     колес?</h3>
@@ -304,18 +432,18 @@
             </div>
             <nav class="col">
                 <p class="footer__heading">Клиентам</p>
-                <a href="#">Услуги</a>
-                <a href="#">Преимущества</a>
-                <a href="#">Работы</a>
-                <a href="#">Цены</a>
+                <a href="#services">Услуги</a>
+                <a href="#features">Преимущества</a>
+                <a href="#mobile">Работы</a>
+                <a href="#price">Цены</a>
                 <a href="#">В магазин</a>
             </nav>
             <div class="col">
                 <p class="footer__heading">Клиентам</p>
-                <a href="#" class="footer__address">192102, Санкт-Петербург, Салова 45А</a>
+                <a href="https://yandex.ru/maps/" target="_blank" class="footer__address">192102, Санкт-Петербург, Салова 45А</a>
                 <a href="tel:88005551326" class="footer__phone">8 (800) 555-13-26</a>
                 <a href="mailto:info@shiny-migom.ru" class="footer__email">info@shiny-migom.ru</a>
-                <a href="mailto:info@shiny-migom.ru" class="btn">Написать директору</a>
+                <a href="https://wa.me/88005551326" target="_blank" class="btn">Написать директору</a>
                 <a href="#" class="footer__external"><img src="img/avito.svg" alt="avito"></a>
             </div>
         </div>

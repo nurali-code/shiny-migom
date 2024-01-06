@@ -50,12 +50,18 @@
     position: relative
     z-index: 1
     overflow: hidden
-    padding-bottom: 134px
+    padding: 50px 0 134px
     &-slider
         flex-wrap: nowrap
         justify-content: flex-start
+        .slick-list
+            padding-left: calc((100% - 1032px)/2)
+            @media screen and ( max-width: 1078px )
+                padding-left: 22px
+
         @media screen and ( max-width: 1000px )
             padding: 0 12px
+            align-items: stretch
             overflow-x: scroll
             -ms-overflow-style: none
             scrollbar-width: none
@@ -64,15 +70,9 @@
                 width: 0
                 height: 0
 
-    .slick
-        &-list
-            padding-left: calc((100% - 1032px)/2)
-
-            @media screen and ( max-width: 1078px )
-                padding-left: 22px
-
     &-item
-        min-width: 503px
+        min-width: 504px
+        width: 504px
         display: flex !important
         background-color: $prime
         clip-path: polygon(0 30px, 30px 0, 100% 0, 100% calc( 100% - 30px ), calc( 100% - 30px ) 100%, 0 100%)
@@ -97,7 +97,7 @@
         font-weight: 400
 
     &__heading
-        padding-right: 40px
+        padding-right: 25px
         font-size: 18px
         font-style: normal
         font-weight: 700
@@ -112,13 +112,14 @@
             display: block
             white-space: nowrap
             position: absolute
-            bottom: 100px
+            bottom: 60px
             z-index: -11
             left: 0
+            margin: 0
             font-size: 160px
             font-style: normal
             font-weight: 600
-            line-height: 30%
+            line-height: 90%
             text-transform: uppercase
             color: #16171B
             text-shadow: 1px 1px #2B2C34, -1px -1px #2B2C34
@@ -232,6 +233,92 @@
             img
                 clip-path: polygon(0 20px, 20px 0, 100% 0, 100% calc( 100% - 20px ), calc( 100% - 20px ) 100%, 0 100%)
 
+.services
+    background-color: $second
+    overflow: hidden
+    padding: 80px 0 114px
+    .wrap
+        align-items: stretch
+        gap: 50px
+
+    h2
+        margin-bottom: 30px
+
+    &__text
+        font-size: 18px
+        font-weight: 400
+        line-height: 30px
+        margin-bottom: 60px
+        padding-top: 60px
+        background-image: url('../img/quote.svg')
+        background-repeat: no-repeat
+        background-size: 38px auto
+        line-height: 30px
+
+    &-item
+        text-align: center
+        width: 240px
+        position: relative
+        z-index: 1
+        &::before
+            content: ''
+            display: block
+            width: 100%
+            aspect-ratio: 1/1
+            background-repeat: no-repeat
+            background-position: center center
+            background-size: contain
+            background-image: url('../img/bg-outline_3.svg')
+            position: absolute
+            top: 10px
+            left: 10px
+            transform-origin: 50% 50%
+            animation: rotateZ 4s infinite
+            pointer-events: none
+
+        &:nth-child(2)::before
+            animation-delay: .5s
+        &:nth-child(3)::before
+            animation-delay: 1s
+        &:nth-child(4)::before
+            animation-delay: 1.5s
+        &:nth-child(5)::before
+            animation-delay: 2s
+        &:nth-child(6)::before
+            animation-delay: 2.5s
+
+        img
+            width: 100%
+            aspect-ratio: 1/1
+            clip-path: polygon(0 20px, 20px 0, 100% 0, 100% calc( 100% - 20px ), calc( 100% - 20px ) 100%, 0 100%)
+            display: block
+            margin: 0 0 40px
+
+    @media screen and ( max-width: 1000px )
+        text-align: center
+        &__text
+            background-position: top center
+            max-width: 400px
+            margin: 0 auto 60px
+        .wrap
+            gap: 100px
+            justify-content: center
+
+    @media screen and ( max-width: 900px )
+        .wrap
+            justify-content: center
+
+    @media screen and ( max-width: 700px )
+        padding: 40px 0
+        &__text
+            margin-bottom: 0
+            font-size: 16px
+            max-width: 315px
+
+        &-item
+            width: 204px
+            margin: 34px 10vh 0
+
 .price
     background-color: $prime
     color: $black
@@ -317,10 +404,221 @@
         padding: 15px 20px
         height: 14.2%
 
+.low
+    padding: 100px 0 10px
+
+    .container
+        align-items: flex-start
+
+    &-img
+        width: 416px
+        max-width: 42%
+        img
+            display: block
+            width: 100%
+            aspect-ratio: 1/1
+            object-fit: contain
+            object-position: center center
+
+        @media screen and ( min-width: 700px )
+            position: relative
+            &::before,
+            &::after
+                content: ''
+                display: block
+                width: 100%
+                height: 100%
+                position: absolute
+                top: 0
+                left: 0
+                z-index: -1
+                background-repeat: no-repeat
+                background-position: center center
+                background-size: contain
+                background-image: url('../img/bg-outline_2.svg')
+                animation: rotate 13s ease forwards alternate-reverse infinite
+
+            &::after
+                background-image: url('../img/bg-outline.svg')
+                animation-delay: 4s
+
+    &-title
+        width: 48%
+
+    &-list
+        margin-bottom: 50px
+        li
+            font-size: 24px
+            font-weight: 400
+            line-height: 135%
+
+            background-image: url('../img/list-arrow.svg')
+            background-repeat: no-repeat
+            background-position: center left
+            padding: 15px 0 15px 38px
+            color: $prime
+            @media screen and ( max-width: 1000px )
+                font-size: 20px
+            @media screen and ( max-width: 800px )
+                font-size: 18px
+
+    form
+        input
+            width: 250px
+            max-width: 49%
+
+        .btn
+            padding: 12px 38px
+            text-align: center
+            justify-content: center
+
+        @media screen and ( max-width: 900px )
+            width: 100%
+            max-width: 400px
+            margin: 0
+            input, .btn
+                max-width: 100%
+                width: 100%
+            .btn
+                margin-top: 20px
+
+    @media screen and ( min-width: 1000px )
+        .headline
+            font-size: 40px
+
+    @media screen and ( max-width: 700px )
+        padding: 40px 0 10px
+        .headline
+            max-width: 344px
+            margin-bottom: calc( 100vw - 4px )
+
+        .wrap
+            position: relative
+            z-index: 1
+            max-width: 500px
+
+        &-list
+            padding-top: 30px
+            margin-bottom: 30px
+
+        &-title
+            width: 100%
+            max-width: 100%
+
+        &-img
+            position: absolute
+            top: 110px
+            left: 22px
+            width: calc( 100vw - 44px )
+            max-width: 500px
+
+.reviews
+    position: relative
+    overflow: hidden
+    .wk__textbg
+        font-weight: 400
+        bottom: 0
+
+    @media screen and ( max-width: 1090px )
+        padding-bottom: 20px
+    @media screen and ( max-width: 700px )
+        padding-bottom: 10px
+
+.review
+    padding: 30px 30px 20px
+    color: $black
+    width: 504px
+    min-width: 504px
+    position: relative
+    z-index: 1
+    margin: 0 24px 10px 0
+    &::before,
+    &::after
+        content: ''
+        display: block
+        width: 100%
+        height: 100%
+        position: absolute
+        z-index: -1
+        pointer-events: none
+
+    &::before
+        top: 0
+        left: 0
+        background-color: $second
+        clip-path: polygon(0 18px, 18px 0, 100% 0, 100% calc( 100% - 18px ), calc( 100% - 18px ) 100%, 0 100%)
+
+    &::after
+        width: calc( 100% - 10px )
+        border-left: 1px solid $prime
+        background-image: url('../img/bg-outline_4.svg')
+        background-repeat: no-repeat
+        background-position: right 1px bottom
+        right: -10px
+        bottom: -10px
+        z-index: -100
+        background-size: auto 100%
+
+    &-header
+        justify-content: flex-start
+        gap: 10px
+        font-size: 12px
+        line-height: 18px
+        margin-bottom: 17px
+        img
+            width: 36px
+            aspect-ratio: 1/1
+            object-fit: cover
+            border-radius: 50%
+
+        strong
+            display: block
+            font-weight: 700
+
+    &__stars
+        display: inline-block !important
+        margin-right: 7px
+        vertical-align: middle
+
+    &__text
+        font-size: 12px
+        font-weight: 400
+        line-height: 140%
+        margin: 0 0 20px
+
+    &__from
+        font-size: 18px
+        font-weight: 400
+        line-height: 133%
+
+    @media screen and ( max-width: 1090px )
+        width: 470px
+        min-width: 470px
+
+    @media screen and ( max-width: 1000px )
+        padding: 20px 20px 15px
+        width: 260px
+        min-width: 260px
+        margin: 0 10px 5px 10px
+        &::after
+            bottom: -5px
+            right: -5px
+
+        &__stars
+            margin-right: 2px
+
+        &-header
+            margin-bottom: 10px
+
+        &__text
+            font-size: 10px
+            margin-bottom: 10px
+
+        &__from
+            font-size: 12px
+
 .faq
-    h2
-        font-size: 48px
-        line-height: 100%
+    padding-top: 50px
 
 .how
     background-color: $prime
@@ -351,9 +649,15 @@
 
 @keyframes rotate
     0%
+        transform: rotate(-180deg)
+    100%
+        transform: rotate(180deg)
+
+@keyframes rotateZ
+    0%
         transform: rotate(0deg)
     100%
-        transform: rotate(360deg)
+        transform: rotate(180deg)
 
 @media screen and ( max-width: 1000px )
     .main
@@ -405,7 +709,8 @@
                 font-size: 14px
                 font-weight: 700
                 line-height: 111.111%
-                padding: 12px 20px
+                padding: 12px 20px 10px
+                opacity: 1
                 border: 1px solid $black
                 color: $black
                 &.active
@@ -450,6 +755,8 @@
             width: 100%
             height: 204px
             aspect-ratio: 1/1
+            border-right: none
+            border-bottom: 1px solid $black
 
         &-title
             padding: 15px
@@ -520,7 +827,7 @@
             margin-bottom: 10px
 
     .price
-        h2 
+        h2
             margin-bottom: 10px
         .col, .row
             font-size: 12px
@@ -544,7 +851,7 @@
         &__descr
             font-size: 15px
             margin-bottom: 10px
-            b 
+            b
                 display: block
 
         .filter
