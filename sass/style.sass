@@ -244,10 +244,15 @@
         line-height: 30px
         margin-bottom: 60px
 
-    .wrap
+    .filter
+        @media screen and ( min-width: 1000px )
+            display: none
+
+    &-table
         border: 1px solid $black
         border-right: none
         position: relative
+        align-items: stretch
         z-index: 1
         &::before,
         &::after
@@ -267,22 +272,38 @@
             right: -16px
             border-left: 1px solid $black
 
-    .col
-        width: 13%
-        text-align: center
+    .col,
+    .row
         font-size: 16px
         font-weight: 400
         line-height: 150%
+
+    .col
+        width: 13.5%
+        text-align: center
         &:first-child
             text-align: left
-            width: 48%
+            width: 46%
             .td,
             .th
                 justify-content: flex-start
 
+    .row
+        width: 100%
+        .td
+            width: 54%
+            border-top: 1px solid $black
+            min-height: 80px
+            &:first-child
+                text-align: left
+                justify-content: flex-start
+                width: 46%
+                border-bottom: none
+
     .td
         &:last-child
             border-bottom: none
+
     .th
         font-weight: 600
     .td,
@@ -294,6 +315,7 @@
         justify-content: center
         align-items: center
         padding: 15px 20px
+        height: 14.2%
 
 .faq
     h2
@@ -368,6 +390,42 @@
             justify-content: center
         &-item
             width: 310px
+
+    .price
+        &__descr
+            font-size: 18px
+            line-height: 140%
+            margin-bottom: 30px
+
+        .filter
+            gap: 20px
+            justify-content: flex-end
+            margin-bottom: 20px
+            &__btn
+                font-size: 14px
+                font-weight: 700
+                line-height: 111.111%
+                padding: 12px 20px
+                border: 1px solid $black
+                color: $black
+                &.active
+                    background-color: $black
+                    color: white
+
+        .col
+            display: none
+            width: 37%
+            &:nth-child(2)
+                display: block
+            &:first-child
+                display: block
+                text-align: left
+                width: 63%
+
+        .row .td
+            width: 37%
+            &:first-child
+                width: 63%
 
     .how
         padding: 60px 0
@@ -460,6 +518,40 @@
             width: 100%
             order: 1
             margin-bottom: 10px
+
+    .price
+        h2 
+            margin-bottom: 10px
+        .col, .row
+            font-size: 12px
+            line-height: 140%
+
+        .col
+            width: 30%
+            &:first-child
+                width: 70%
+
+        .td, th
+            min-height: 74px
+            height: unset
+            padding: 11px 14px
+
+        .row .td
+            width: 30%
+            &:first-child
+                width: 70%
+
+        &__descr
+            font-size: 15px
+            margin-bottom: 10px
+            b 
+                display: block
+
+        .filter
+            gap: 10px
+            &__btn
+                font-size: 9px
+                padding: 8px 7px 7px
 
     .faq
         h2
