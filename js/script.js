@@ -5,15 +5,15 @@ $(document).ready(function () {
     new Textify();
     const section1 = new Textify({
         selector: ".js-textify",
-        once: false,
-        scale: .2,
+        once: true,
+        scale: .1,
         rotation: 20,
         easing: "ease",
         fade: false,
         duration: 1000
     });
 
-    AOS.init({ duration: 1000, offset: 100, });
+    AOS.init({ duration: 1200, offset: 100, });
 
     $('.dropdown__btn').on('click', function () {
         $('.dropdown__text').slideUp();

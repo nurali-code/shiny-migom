@@ -11,6 +11,7 @@
     position: relative
     z-index: 999
     overflow: hidden
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 94%)
 
     h1
         margin: 0 0 100px
@@ -21,6 +22,8 @@
     .container
         min-height: 920px
         z-index: 99
+        @media screen and ( max-width: 1500px )
+            min-height: 820px
 
     &__img
         display: block
@@ -48,13 +51,14 @@
         object-position: bottom right
 
     .scene
+        display: block
         position: absolute
         top: 0
         left: 0
         z-index: -1
         width: 100%
         height: 100%
-        clip-path: polygon(0 0, 100% 0, 100% 98%, 0 94%)
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 93%)
 
 .wk
     position: relative
@@ -207,10 +211,10 @@
         @media screen and ( min-width: 700px )
             max-width: 28%
             width: 261px
-            &:nth-child(7),
-            &:nth-child(8)
+            &:nth-child(8),
+            &:nth-child(9)
                 border: none
-            &:nth-child(odd)
+            &:nth-child(even)
                 width: 284px
                 text-align: right
 
@@ -697,6 +701,7 @@
 @media screen and ( max-width: 1000px )
     .main
         text-align: center
+        clip-path: none
 
         .container
             min-height: unset
@@ -835,6 +840,7 @@
         h2
             text-align: center
             margin-bottom: 40px
+
         &-list
             border: 1px solid #2B2C34
             clip-path: polygon(0 20px, 20px 0, 100% 0, 100% calc( 100% - 20px ), calc( 100% - 20px ) 100%, 0 100%)
@@ -852,17 +858,15 @@
 
         &-item
             width: 100%
-            order: 2
             text-align: center
             padding: 20px 10px
             max-width: calc( 100% - 40px )
             margin: 0 auto
-            &:nth-child(8)
+            &:nth-child(9)
                 border: none
 
         &-img
             width: 100%
-            order: 1
             margin-bottom: 10px
 
     .price

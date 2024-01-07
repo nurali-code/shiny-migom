@@ -28,7 +28,6 @@
                 </nav>
                 <a href="tel:88005551326" class="phone">8 800 555 13 26</a>
                 <button class="btnMenu"></button>
-                <!-- <div class="overlay"></div> -->
             </header>
 
             <h1 data-textify>Выездной <br>шиномонтаж</h1>
@@ -58,9 +57,12 @@
                 </ul>
             </div>
         </div>
-        <div class="scene" id="scene">
+        
+        <picture class="scene" id="scene">
+            <source srcset="img/main.avif" type="image/avif">
+            <source srcset="img/main.webp" type="image/webp">
             <img src="img/main.jpg" data-depth=".31" alt="main" class="main__bg">
-        </div>
+        </picture>
     </main>
 
     <section class="wk" id="masters">
@@ -148,17 +150,18 @@
         <div class="container">
             <h2 class="js-textify">Преимущества <br> мобильного шиномонтажа</h2>
             <ul class="features-list wrap">
+                <li class="features-img">
+                    <img src="img/features.jpg" loading="lazy" alt="main">
+                </li>
                 <li class="features-item" data-aos="fade-right">Гарантия на все <i>виды работ</i></li>
                 <li class="features-item" data-aos="fade-left" data-aos-delay="300">Профессиональная диагностика</li>
                 <li class="features-item" data-aos="fade-right" data-aos-delay="100">Круглосуточно, 24/7</li>
                 <li class="features-item" data-aos="fade-left" data-aos-delay="200">Любая форма оплаты</li>
                 <li class="features-item" data-aos="fade-right" data-aos-delay="200">Высокое качество обслуживания</li>
                 <li class="features-item" data-aos="fade-left" data-aos-delay="100">Без очередей</li>
-                <li class="features-item" data-aos="fade-right" data-aos-delay="300">Сертифицированное оборудование и мастера</li>
+                <li class="features-item" data-aos="fade-right" data-aos-delay="300">Сертифицированное оборудование и
+                    мастера</li>
                 <li class="features-item" data-aos="fade-left" data-aos-delay="0">В дороге, На даче, <i>У дома</i></li>
-                <li class="features-img">
-                    <img src="img/features.jpg" loading="lazy" alt="main">
-                </li>
             </ul>
         </div>
     </section>
@@ -362,7 +365,7 @@
     <section class="faq" id="faq">
         <div class="container">
             <h2 class="headline js-textify">Ответы на частые вопросы</h2>
-            <div class="dropdown" data-aos="fade-up">
+            <div class="dropdown" data-aos-delay="50" data-aos="fade-up">
                 <h3 class="dropdown__btn">Есть ли отличия мобильного шиномонтажа от стационарного при балансировки
                     колес?</h3>
                 <p class="dropdown__text">
@@ -370,28 +373,28 @@
                     сезонной замены занимает от 25 до 35 минут для одного автомобиля.
                 </p>
             </div>
-            <div class="dropdown" data-aos="fade-up">
+            <div class="dropdown" data-aos-delay="100" data-aos="fade-up">
                 <h3 class="dropdown__btn">Что представляет собой услуга передвижного шиномонтажа?</h3>
                 <p class="dropdown__text">
                     Все зависит от типа Вашего автомобиля. По статистике, среднее время выполнения комплекса работ
                     сезонной замены занимает от 25 до 35 минут для одного автомобиля.
                 </p>
             </div>
-            <div class="dropdown" data-aos="fade-up">
+            <div class="dropdown" data-aos-delay="150" data-aos="fade-up">
                 <h3 class="dropdown__btn">Для каких типо транспортных средств вы делаете мобильный ш/м?</h3>
                 <p class="dropdown__text">
                     Все зависит от типа Вашего автомобиля. По статистике, среднее время выполнения комплекса работ
                     сезонной замены занимает от 25 до 35 минут для одного автомобиля.
                 </p>
             </div>
-            <div class="dropdown" data-aos="fade-up">
+            <div class="dropdown" data-aos-delay="200" data-aos="fade-up">
                 <h3 class="dropdown__btn">В какие районы Санкт-Петербурга вы выезжаете?</h3>
                 <p class="dropdown__text">
                     Все зависит от типа Вашего автомобиля. По статистике, среднее время выполнения комплекса работ
                     сезонной замены занимает от 25 до 35 минут для одного автомобиля.
                 </p>
             </div>
-            <div class="dropdown" data-aos="fade-up">
+            <div class="dropdown" data-aos-delay="250" data-aos="fade-up">
                 <h3 class="dropdown__btn">Где вас можно найти?</h3>
                 <p class="dropdown__text">
                     Все зависит от типа Вашего автомобиля. По статистике, среднее время выполнения комплекса работ
@@ -457,8 +460,6 @@
             </div>
         </div>
     </footer>
-
-
 
     <script src="./js/jquery-3.7.1.min.js"></script>
     <script src="./js/parallax.min.js"></script>
