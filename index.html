@@ -7,6 +7,7 @@
     <title>Выездной шиномонтаж</title>
     <meta name="theme-color" content="#FFDB4D">
     <link type="image/svg" rel="shortcut icon" href="./favicon.svg">
+    <link rel="stylesheet" href="./css/aos.css">
 
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -27,15 +28,17 @@
                 </nav>
                 <a href="tel:88005551326" class="phone">8 800 555 13 26</a>
                 <button class="btnMenu"></button>
+                <!-- <div class="overlay"></div> -->
             </header>
 
-            <h1>Выездной <br>шиномонтаж</h1>
+            <h1 data-textify>Выездной <br>шиномонтаж</h1>
             <a href="tel:88005551326" class="btn"> <img src="img/ic-call.svg" alt="call"> Вызвать мастера</a>
-            <a href="https://wa.me/88005551326" target="_blank" class="btn_2"> <img src="img/ic-wa.svg" alt="wa"> Написать в Whatsapp</a>
+            <a href="https://wa.me/88005551326" target="_blank" class="btn_2"> <img src="img/ic-wa.svg" alt="wa">
+                Написать в Whatsapp</a>
 
             <picture>
                 <source srcset="img/wk.webp" type="image/webp">
-                <img src="img/wk.png" alt="wk" class="main__img">
+                <img src="img/wk.png" data-aos="fade-up" data-aos-delay="1000" alt="wk" class="main__img">
             </picture>
 
             <div class="marquee">
@@ -55,13 +58,15 @@
                 </ul>
             </div>
         </div>
-        <img src="img/main.jpg" alt="main" class="main__bg">
+        <div class="scene" id="scene">
+            <img src="img/main.jpg" data-depth=".31" alt="main" class="main__bg">
+        </div>
     </main>
 
     <section class="wk" id="masters">
-        <h2 class="container">К вам приедет</h2>
+        <h2 class="container js-textify">К вам приедет</h2>
         <div class="wrap wk-slider">
-            <div class="wk-item">
+            <div class="wk-item" data-aos="fade-left">
                 <img src="img/wk-1.jpg" alt="img" class="wk__img" loading="lazy">
                 <div class="wk-title">
                     <p class="wk__heading">
@@ -78,7 +83,7 @@
                     </p>
                 </div>
             </div>
-            <div class="wk-item">
+            <div class="wk-item" data-aos="fade-left" data-aos-delay="200">
                 <img src="img/wk-2.jpg" alt="img" class="wk__img" loading="lazy">
                 <div class="wk-title">
                     <p class="wk__heading">
@@ -96,7 +101,7 @@
                     </p>
                 </div>
             </div>
-            <div class="wk-item">
+            <div class="wk-item" data-aos="fade-left" data-aos-delay="400">
                 <img src="img/wk-3.jpg" alt="img" class="wk__img" loading="lazy">
                 <div class="wk-title">
                     <p class="wk__heading">
@@ -114,23 +119,25 @@
                 </div>
             </div>
         </div>
-        <h3 class="wk__textbg">Наши мастера</h3>
+        <div class="scene" id="scene2">
+            <h3 class="wk__textbg" data-depth=".4">Наши мастера</h3>
+        </div>
     </section>
 
     <section class="mobile" id="mobile">
         <div class="container">
-            <h2>Мобильный шиномонтаж <i>и замена</i> колес</h2>
+            <h2 class="js-textify">Мобильный шиномонтаж <i>и замена</i> колес</h2>
             <div class="wrap">
-                <p class="mobile-item fx">
-                    <img src="img/car-1.svg" alt="car" class="mobile-icon">
+                <p class="mobile-item fx" data-aos="fade-up">
+                    <img src="img/car-1.svg" data-aos="fade-up" alt="car" class="mobile-icon">
                     <span>Легковые автомобили</span>
                 </p>
-                <p class="mobile-item fx">
-                    <img src="img/car-2.svg" alt="car" class="mobile-icon">
+                <p class="mobile-item fx" data-aos="fade-up" data-aos-delay="200">
+                    <img src="img/car-2.svg" data-aos="fade-up" alt="car" class="mobile-icon">
                     <span>Кроссоверы, джипы, минивены</span>
                 </p>
-                <p class="mobile-item fx">
-                    <img src="img/car-3.svg" alt="car" class="mobile-icon">
+                <p class="mobile-item fx" data-aos="fade-up" data-aos-delay="400">
+                    <img src="img/car-3.svg" data-aos="fade-up" alt="car" class="mobile-icon">
                     <span>Коммерческий транспорт</span>
                 </p>
             </div>
@@ -139,17 +146,16 @@
 
     <section class="features" id="features">
         <div class="container">
-            <h2>Преимущества <br> мобильного шиномонтажа</h2>
+            <h2 class="js-textify">Преимущества <br> мобильного шиномонтажа</h2>
             <ul class="features-list wrap">
-                <li class="features-item">Гарантия на все <i>виды работ</i></li>
-                <li class="features-item">Профессиональная диагностика</li>
-                <li class="features-item">Круглосуточно, 24/7</li>
-                <li class="features-item">Любая форма оплаты</li>
-                <li class="features-item">Высокое качество обслуживания</li>
-                <li class="features-item">Без очередей</li>
-                <li class="features-item">Сертифицированное оборудование и мастера</li>
-                <li class="features-item">В дороге, На даче, <i>У дома</i></li>
-
+                <li class="features-item" data-aos="fade-right">Гарантия на все <i>виды работ</i></li>
+                <li class="features-item" data-aos="fade-left" data-aos-delay="300">Профессиональная диагностика</li>
+                <li class="features-item" data-aos="fade-right" data-aos-delay="100">Круглосуточно, 24/7</li>
+                <li class="features-item" data-aos="fade-left" data-aos-delay="200">Любая форма оплаты</li>
+                <li class="features-item" data-aos="fade-right" data-aos-delay="200">Высокое качество обслуживания</li>
+                <li class="features-item" data-aos="fade-left" data-aos-delay="100">Без очередей</li>
+                <li class="features-item" data-aos="fade-right" data-aos-delay="300">Сертифицированное оборудование и мастера</li>
+                <li class="features-item" data-aos="fade-left" data-aos-delay="0">В дороге, На даче, <i>У дома</i></li>
                 <li class="features-img">
                     <img src="img/features.jpg" loading="lazy" alt="main">
                 </li>
@@ -159,7 +165,7 @@
 
     <div class="services" id="services">
         <div class="container">
-            <h2>Услуги</h2>
+            <h2 class="js-textify">Услуги</h2>
             <p class="services__text">Мобильные шиномонтажные услуги стоят <mark>дешевле</mark>, чем вызов эвакуатора.
             </p>
             <div class="wrap services-slider">
@@ -193,7 +199,7 @@
 
     <section class="price" id="price">
         <div class="container">
-            <h2>Стоимость</h2>
+            <h2 class="js-textify">Стоимость</h2>
             <p class="price__descr">Минимальная стоимость выезда: <b>2500 P</b></p>
             <div class="wrap filter">
                 <button data-filter="1" class="filter__btn active">R13-R16</button>
@@ -263,7 +269,7 @@
                 <img src="img/low.svg" alt="low">
             </div>
             <div class="low-title">
-                <h2 class="headline">Для юридических лиц</h2>
+                <h2 class="headline js-textify">Для юридических лиц</h2>
                 <ul class="low-list">
                     <li>Работа с НДС</li>
                     <li>Комплексное обслуживание автопарков</li>
@@ -279,9 +285,9 @@
     </section>
 
     <section class="reviews" id="reviews">
-        <h2 class="headline container">Отзывы</h2>
+        <h2 class="headline container js-textify">Отзывы</h2>
         <div class="wrap wk-slider">
-            <div class="review">
+            <div class="review" data-aos="fade-left">
                 <p class="review-header wrap">
                     <img src="img/rev.png" alt="reviews">
                     <span>
@@ -303,7 +309,7 @@
                 </p>
                 <p class="review__from">Отзыв с Яндекс Маркета</p>
             </div>
-            <div class="review">
+            <div class="review" data-aos="fade-left" data-aos-delay="200">
                 <p class="review-header wrap">
                     <img src="img/rev.png" alt="reviews">
                     <span>
@@ -325,7 +331,7 @@
                 </p>
                 <p class="review__from">Отзыв с Яндекс Маркета</p>
             </div>
-            <div class="review">
+            <div class="review" data-aos="fade-left" data-aos-delay="400">
                 <p class="review-header wrap">
                     <img src="img/rev.png" alt="reviews">
                     <span>
@@ -348,13 +354,15 @@
                 <p class="review__from">Отзыв с Яндекс Маркета</p>
             </div>
         </div>
-        <h3 class="wk__textbg">SHINY MIGOM</h3>
+        <div class="scene" id="scene3">
+            <h3 class="wk__textbg" data-depth=".3">SHINY MIGOM</h3>
+        </div>
     </section>
 
     <section class="faq" id="faq">
         <div class="container">
-            <h2 class="headline">Ответы на частые вопросы</h2>
-            <div class="dropdown">
+            <h2 class="headline js-textify">Ответы на частые вопросы</h2>
+            <div class="dropdown" data-aos="fade-up">
                 <h3 class="dropdown__btn">Есть ли отличия мобильного шиномонтажа от стационарного при балансировки
                     колес?</h3>
                 <p class="dropdown__text">
@@ -362,28 +370,28 @@
                     сезонной замены занимает от 25 до 35 минут для одного автомобиля.
                 </p>
             </div>
-            <div class="dropdown">
+            <div class="dropdown" data-aos="fade-up">
                 <h3 class="dropdown__btn">Что представляет собой услуга передвижного шиномонтажа?</h3>
                 <p class="dropdown__text">
                     Все зависит от типа Вашего автомобиля. По статистике, среднее время выполнения комплекса работ
                     сезонной замены занимает от 25 до 35 минут для одного автомобиля.
                 </p>
             </div>
-            <div class="dropdown">
+            <div class="dropdown" data-aos="fade-up">
                 <h3 class="dropdown__btn">Для каких типо транспортных средств вы делаете мобильный ш/м?</h3>
                 <p class="dropdown__text">
                     Все зависит от типа Вашего автомобиля. По статистике, среднее время выполнения комплекса работ
                     сезонной замены занимает от 25 до 35 минут для одного автомобиля.
                 </p>
             </div>
-            <div class="dropdown">
+            <div class="dropdown" data-aos="fade-up">
                 <h3 class="dropdown__btn">В какие районы Санкт-Петербурга вы выезжаете?</h3>
                 <p class="dropdown__text">
                     Все зависит от типа Вашего автомобиля. По статистике, среднее время выполнения комплекса работ
                     сезонной замены занимает от 25 до 35 минут для одного автомобиля.
                 </p>
             </div>
-            <div class="dropdown">
+            <div class="dropdown" data-aos="fade-up">
                 <h3 class="dropdown__btn">Где вас можно найти?</h3>
                 <p class="dropdown__text">
                     Все зависит от типа Вашего автомобиля. По статистике, среднее время выполнения комплекса работ
@@ -395,7 +403,7 @@
 
     <section class="how">
         <div class="container">
-            <h2>
+            <h2 class="js-textify">
                 Как воспользоваться услугой
                 «выездной шиномонтаж» в Санкт-Петербурге?
             </h2>
@@ -440,7 +448,8 @@
             </nav>
             <div class="col">
                 <p class="footer__heading">Клиентам</p>
-                <a href="https://yandex.ru/maps/" target="_blank" class="footer__address">192102, Санкт-Петербург, Салова 45А</a>
+                <a href="https://yandex.ru/maps/" target="_blank" class="footer__address">192102, Санкт-Петербург,
+                    Салова 45А</a>
                 <a href="tel:88005551326" class="footer__phone">8 (800) 555-13-26</a>
                 <a href="mailto:info@shiny-migom.ru" class="footer__email">info@shiny-migom.ru</a>
                 <a href="https://wa.me/88005551326" target="_blank" class="btn">Написать директору</a>
@@ -450,8 +459,12 @@
     </footer>
 
 
+
     <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/parallax.min.js"></script>
+    <script src="./js/textify.min.js"></script>
     <script src="./js/slick.min.js"></script>
+    <script src="./js/aos.js"></script>
     <script src="./js/script.js"></script>
 
 </body>

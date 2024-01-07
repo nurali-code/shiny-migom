@@ -37,20 +37,30 @@
             bottom: 20px
 
     &__bg
-        width: 100%
-        height: 99%
+        position: absolute
+        width: 106%
+        max-width: unset
+        margin-left: -3%
+        height: 106%
+        margin-top: -4%
+        z-index: -111
+        object-fit: cover
+        object-position: bottom right
+
+    .scene
         position: absolute
         top: 0
         left: 0
-        z-index: -111
-        object-fit: cover
+        z-index: -1
+        width: 100%
+        height: 100%
         clip-path: polygon(0 0, 100% 0, 100% 98%, 0 94%)
 
 .wk
     position: relative
     z-index: 1
     overflow: hidden
-    padding: 50px 0 134px
+    padding: 80px 0 134px
     &-slider
         flex-wrap: nowrap
         justify-content: flex-start
@@ -112,9 +122,7 @@
             display: block
             white-space: nowrap
             position: absolute
-            bottom: 60px
             z-index: -11
-            left: 0
             margin: 0
             font-size: 160px
             font-style: normal
@@ -123,6 +131,17 @@
             text-transform: uppercase
             color: #16171B
             text-shadow: 1px 1px #2B2C34, -1px -1px #2B2C34
+
+    .scene
+        display: none
+        @media screen and ( min-width: 1000px )
+            display: block
+            width: 100%
+            height: 180px
+            position: absolute
+            bottom: 20px !important
+            left: 0 !important
+            z-index: -1
 
 .mobile
     padding: 80px 0 140px
@@ -310,6 +329,11 @@
 
     @media screen and ( max-width: 700px )
         padding: 40px 0
+        .wrap
+            width: 100vw
+            position: relative
+            left: -22px
+
         &__text
             margin-bottom: 0
             font-size: 16px
@@ -517,12 +541,23 @@
     overflow: hidden
     .wk__textbg
         font-weight: 400
-        bottom: 0
 
     @media screen and ( max-width: 1090px )
         padding-bottom: 20px
+
     @media screen and ( max-width: 700px )
         padding-bottom: 10px
+
+    .scene
+        display: none
+        @media screen and ( min-width: 1000px )
+            display: block
+            width: 100%
+            height: 180px
+            position: absolute
+            bottom: 0px !important
+            left: 0 !important
+            z-index: -1
 
 .review
     padding: 30px 30px 20px
@@ -680,6 +715,10 @@
         .btn,
         .btn_2
             margin: 3px
+
+        &__bg
+            object-position: bottom center
+            margin-top: -6%
 
     .wk
         padding: 60px 0 70px
