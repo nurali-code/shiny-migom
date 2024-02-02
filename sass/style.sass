@@ -405,15 +405,37 @@
 
     .row
         width: 100%
+        align-items: stretch
         .td
             width: 54%
             border-top: 1px solid $black
+            height: unset !important
             min-height: 80px
             &:first-child
                 text-align: left
                 justify-content: flex-start
                 width: 46%
                 border-bottom: none
+
+        .col
+            width: 54%
+            display: flex !important
+            flex-wrap: wrap
+            .td
+                width: 25%
+                border-bottom: none
+
+            @media screen and (max-width: 1000px)
+                width: 37%
+                .td
+                    justify-content: center !important
+                    width: 50% !important
+
+            @media screen and (max-width: 700px)
+                width: 30%
+                .td
+                    width: 100% !important
+                    min-height: unset
 
     .td
         &:last-child
